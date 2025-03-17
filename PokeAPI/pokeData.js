@@ -1,10 +1,10 @@
-import getData from "./DatosAPI/getDataApi.js";
+import getData from "./DatosPokeAPI/getPokeData.js";
 
 async function showData() {
     const data = await getData();
     let div = document.getElementById("content");
 
-    data.forEach(e => {
+    data.results.forEach(e => {
         let pe = document.createElement("p");
         pe.innerHTML = e.name;
         div.appendChild(pe);
